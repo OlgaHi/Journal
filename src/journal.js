@@ -5,5 +5,5 @@ export default function Journal(title, body) {
 
 Journal.prototype.evalString = function() {
   //   let myString = this.body.split(" ").length;
-  //   console.log(myString);
+  //   return myString;
   }
