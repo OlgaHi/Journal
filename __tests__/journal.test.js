@@ -31,4 +31,14 @@ import Journal from './../src/journal.js';
     const journal = new Journal("my JOurnal", "Here is the text for it. Also, olha loves coding");
     expect(journal.getTeaser()).toEqual("Here is the text for it.");
   });
+
+  test('should return the first 8 words of the first sentence if it is over 8 words long without a period', () => {
+    const journal = new Journal("my JOurnal", "Here is the text for it, also, olha loves coding");
+    expect(journal.getTeaser()).toEqual("Here is the text for it, also, olha...");
+  });
+
+  test('should return the first sentence from the body if it is under 8 words long  without a period', () => {
+    const journal = new Journal("my JOurnal", "Here is the text for it");
+    expect(journal.getTeaser()).toEqual("Here is the text for it");
+  });
 });
