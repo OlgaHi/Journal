@@ -21,8 +21,29 @@ Journal.prototype.getConsAndVows = function(){
     }
     if (letter.match(/[aeiou]/)) {vows ++;}
     else {cons ++;}
-    
   }
-  console.log(cons,vows);
   return [cons,vows];
 };
+
+Journal.prototype.getTeaser = function() {
+  if (this.body.includes(".")) {
+    let firstPer = this.body.indexOf(".");
+    let firstSentence = this.body.slice(0,firstPer+1);
+    let words = firstSentence.split(" ");
+    if (words.length > 8) {
+      let shortSentence = words.slice(0,8);
+      return shortSentence.join(" ")+"...";
+    }
+    else {
+      return firstSentence;
+    }
+  } else {
+    let words = this.body.split(" ");
+    if (words.length > 8) {
+      let shortSentence = words.slice(0,8);
+      return shortSentence.join(" ")+"...";
+    } else {
+      return this.body;
+    }
+  }
+}
