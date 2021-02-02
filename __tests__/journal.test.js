@@ -15,7 +15,7 @@ import Journal from './../src/journal.js';
   });
 
   test('should return the number of words in the body', () => {
-    expect(reusableJournal.evalString()).toEqual("12");
+    expect(reusableJournal.evalString()).toEqual(12);
   });
 
 });
