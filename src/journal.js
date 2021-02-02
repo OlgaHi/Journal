@@ -7,3 +7,6 @@ Journal.prototype.evalString = function() {
   let myString = this.body.split(" ").length;
   return myString;
   }
+
+Journal.prototype.getConsAndVows = function(){
+};

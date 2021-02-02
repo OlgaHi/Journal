@@ -3,7 +3,7 @@ import Journal from './../src/journal.js';
   let reusableJournal;
 
   beforeEach(() => {
-  reusableJournal = new Journal("This is a title","This is a short paragraph of text. Inside this paragraph is words.");
+  reusableJournal = new Journal("This is a title","Hello world.");
   });
 
   describe('Journal', () => {
@@ -11,11 +11,14 @@ import Journal from './../src/journal.js';
   test('should correctly create a journal object with two parameters', () => {
     
     expect(reusableJournal.title).toEqual("This is a title");
-    expect(reusableJournal.body).toEqual("This is a short paragraph of text. Inside this paragraph is words.");
+    expect(reusableJournal.body).toEqual("Hello world.");
   });
 
   test('should return the number of words in the body', () => {
-    expect(reusableJournal.evalString()).toEqual(12);
+    expect(reusableJournal.evalString()).toEqual(2);
   });
 
+  test('should return the numbers of the vowels and consonants in an entry', () => {
+    expect(reusableJournal.getConsAndVows()).toEqual([7,3]);
+  });
 });
