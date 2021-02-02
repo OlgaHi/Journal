@@ -4,6 +4,7 @@ import $ from 'jquery';
 import './css/styles.css';
 import Journal from './journal.js';
 $(document).ready(function() {
+
   $('#triangle-checker-form').submit(function(event) {
     event.preventDefault();
     // const length1 = $('#length1').val();
@@ -11,6 +12,7 @@ $(document).ready(function() {
     // const length3 = $('#length3').val();
     const journal = new Journal("my JOurnal", "Here is the text for it, also, olha loves coding")
     const response = journal.evalString();
+    journal.getConsAndVows();
     $('#response').append("<p>" + response + "</p>");
   });
 });

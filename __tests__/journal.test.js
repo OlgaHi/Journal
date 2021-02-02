@@ -3,7 +3,7 @@ import Journal from './../src/journal.js';
   let reusableJournal;
 
   beforeEach(() => {
-  reusableJournal = new Journal("This is a title","Hello world.");
+    reusableJournal = new Journal("This is a title","Hello world.");
   });
 
   describe('Journal', () => {
