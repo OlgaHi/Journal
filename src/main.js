@@ -10,7 +10,7 @@ $(document).ready(function() {
     // const length1 = $('#length1').val();
     // const length2 = $('#length2').val();
     // const length3 = $('#length3').val();
-    const journal = new Journal("my JOurnal", "Here is the text for it, also, olha loves coding")
+    const journal = new Journal("my JOurnal", "Here is the text for it, also, olha loves coding");
     const response = journal.evalString();
     journal.getConsAndVows();
     $('#response').append("<p>" + response + "</p>");

@@ -21,8 +21,10 @@ Journal.prototype.getConsAndVows = function(){
     }
     if (letter.match(/[aeiou]/)) {vows ++;}
     else {cons ++;}
-    
   }
-  console.log(cons,vows);
   return [cons,vows];
 };
+
+Journal.prototype.getTeaser = function() {
+
+}
